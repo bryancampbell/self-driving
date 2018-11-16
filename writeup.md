@@ -13,7 +13,13 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/grayscale.jpg "Grayscale"
+[image1]: ./test_images_output/grayscale.jpg "Grayscale"
+[image2]: ./test_images_output/gaussian_blur.jpg "Gaussian Blur"
+[image3]: ./test_images_output/canny.jpg "Canny Edge Detection"
+[image4]: ./test_images_output/mask.jpg "Mask"
+[image5]: ./test_images_output/hough_lines.jpg "Hough Lines"
+[image6]: ./test_images_output/weighted_img.jpg "Weighted Image"
+
 
 ---
 
@@ -26,6 +32,26 @@ My pipeline consisted of 5 steps.
 ##### 1. Grayscale
 
 ![alt text][image1]
+
+##### 2. Gaussian Blur
+
+![alt text][image2]
+
+##### 3. Canny Edge Detection
+
+![alt text][image3]
+
+##### 4. Mask
+
+![alt text][image4]
+
+##### 5. Hough Lines
+
+![alt text][image5]
+
+##### 6. Weighted Image
+
+![alt text][image6]
 
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
 
