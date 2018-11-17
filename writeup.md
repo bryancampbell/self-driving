@@ -27,29 +27,33 @@ The goals / steps of this project are the following:
 
 ### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
-My pipeline consisted of 5 steps. 
+My pipeline consisted of 8 steps. 
 
-##### 1. Grayscale
+#### 1. Applying the grayscale transform
 
 ![alt text][image1]
 
-##### 2. Gaussian Blur
+#### 2. Applying a Gaussian Noise kernel
 
 ![alt text][image2]
 
-##### 3. Canny Edge Detection
+#### 3. Canny Edge Detection
+
+Instead of endlessly applying the low and high threshold to see what had the best outcome over all of the images I added an auto canny script to figure it out.
 
 ![alt text][image3]
 
-##### 4. Mask
+#### 4. Applied an image mask to only capture lane lines
 
 ![alt text][image4]
 
-##### 5. Hough Lines
+#### 5. Created image with annotated lane lines
 
 ![alt text][image5]
 
-##### 6. Weighted Image
+##### a. Applied Hough Lines to get an array of line coordinates
+
+#### 6. Merged annotated lane lines with original image
 
 ![alt text][image6]
 
