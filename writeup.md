@@ -39,7 +39,7 @@ My pipeline consisted of 8 steps.
 
 #### 3. Canny Edge Detection
 
-Instead of endlessly applying the low and high threshold to see what had the best outcome over all of the images I added an auto canny script to figure it out.
+Instead of endlessly applying the low and high threshold to see what had the best outcome over all of the images, I added an auto canny script to figure it out.
 
 ![alt text][image3]
 
@@ -52,16 +52,13 @@ Instead of endlessly applying the low and high threshold to see what had the bes
 ![alt text][image5]
 
 ##### a. Applied Hough Lines to get an array of line coordinates
+##### b. Using the array of lines, created an estimated left and right lane represented by a single line each
+
+I modified the draw_lines() by first eliminating lines I thought were bad: single pixels, or lines with a given slope but on the wrong side of the image.  I also thought about looking at the line slopes and eliminating lines that had odd slopes that were odd compared to other slopes for each line within a group on a given side but I didn't get that far.  I then split the lines in 2 groups: left and right lane lines.  From there I took the median slope of the lines in each group as well as the median line based on each's coordinates as the "single slope and line of truth".  Lastly I took these single lines per lane and stretched them to the bottom and mid top of the image.  However, this trick would only work for lanes that go in a straight line
 
 #### 6. Merged annotated lane lines with original image
 
 ![alt text][image6]
-
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
-
-If you'd like to include images to show how the pipeline works, here is how to include an image: 
-
-![alt text][image1]
 
 
 ### 2. Identify potential shortcomings with your current pipeline
